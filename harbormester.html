@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Havnemester | Kalvø havn</title>
+
+    <script src="lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+</head>
+<body>
+<div id="include"></div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Havnemester</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="height: 100vh">
+        <object data="/pdf/Havnemester.pdf" type="application/pdf" width="100%" height="100%">
+            <iframe src="/pdf/Havnemester.pdf" width="100%" height="100%" style="border: none;">
+                Denne browser understøtter ikke visning af PDF. Hent istedet PDF'en for at se den: <a
+                    href="/pdf/Havnemester.pdf">Download PDF</a>
+            </iframe>
+        </object>
+    </div>
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        window.onload = function () {
+            jQuery.get("subpages/navbar.html", function (data) {
+                $("#include").html(data);
+            })
+        }
+    });
+</script>
+
+</body>
+</html>

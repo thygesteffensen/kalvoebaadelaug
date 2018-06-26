@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Junior afdeling | Kalvø havn</title>
+
+    <script src="lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+</head>
+<body>
+<div id="include"></div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Junior afdeling</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="card-title">
+                    Junior afdeling
+                </h5>
+            </div>
+            <div class="card-body">
+                <p>
+                    Desværre er vores Junior afdeling Midlertidigt lukket ned.
+                </p>
+                <p>
+                    Men her er nogle billeder fra tidligere Junior sejladser.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        window.onload = function () {
+            jQuery.get("subpages/navbar.html", function (data) {
+                $("#include").html(data);
+            })
+        }
+    });
+</script>
+
+</body>
+</html>

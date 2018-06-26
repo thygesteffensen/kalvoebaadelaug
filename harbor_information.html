@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Havne infomation| Kalvø havn</title>
+
+    <script src="lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+</head>
+<body>
+<div id="include"></div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Havneinfomation</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <!-- Have penge -->
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="card-title">Havne kort</h5>
+                </div>
+                <div class="card-body">
+                    <img src="fig/harbor.jpg" alt="Billede kunne ikke findes...">
+                </div>
+                <div class="card-footer">
+                    <p>Kalvø er beliggende på positionen 55º 07,3’N 09º 28,0’E Kort151</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pratiks infomation -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="card-title">Praktisk infomation</h5>
+                </div>
+                <div class="card-body">
+                    Havnen kan anløbes dag og nat i lyst og sigtbart vejr. Kort før havnen er der opsat en rød pæl
+                    (Bagbords
+                    mærke) med skilte for max. hastighed (3 Knob) og vildt reservat. Genner Fjord og havnen er ikke
+                    fyrbelyst, men der er lys på havnepladsen. Bundgarn og andet fiskegrej forekommer.
+
+                    Der er el og vand på broerne. På land er der opsat grill og der er mulighed for at slappe af i vor
+                    gæstestue eller vaske og tørre sit tøj.
+                </div>
+            </div>
+        </div>
+
+        <!-- Havnepenge -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="card-title">Havepenge</h5>
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        window.onload = function () {
+            jQuery.get("subpages/navbar.html", function (data) {
+                $("#include").html(data);
+            })
+        }
+    });
+</script>
+
+</body>
+</html>

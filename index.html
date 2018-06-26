@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>This is the index page</title>
+
+    <script src="lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
 </head>
 <body>
+<div id="include"></div>
+
+
+<script>
+    $(document).ready(function () {
+        window.onload = function () {
+            jQuery.get("subpages/navbar.html", function (data) {
+                $("#include").html(data);
+            })
+        }
+    });
+</script>
 
 </body>
 </html>
